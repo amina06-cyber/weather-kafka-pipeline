@@ -27,8 +27,8 @@ services:
       POSTGRES_DB: weather
     volumes:
       - pgdata:/var/lib/postgresql/data
-      - ./sql/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql
-      - ./sql/insights.sql:/docker-entrypoint-initdb.d/02_insights.sql
+      - ./schema.sql:/docker-entrypoint-initdb.d/01_schema.sql
+      - ./insights.sql:/docker-entrypoint-initdb.d/02_insights.sql
 
 volumes:
   pgdata:
